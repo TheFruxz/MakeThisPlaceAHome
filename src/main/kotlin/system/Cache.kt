@@ -1,0 +1,4 @@
+package system
+
+object Cache {
+}
