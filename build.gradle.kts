@@ -5,14 +5,25 @@ plugins {
 }
 
 group = "de.fruxz"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
+    maven("https://jitpack.io")
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
     testImplementation(kotlin("test"))
+
+    implementation("io.papermc.paper:paper-api:1.19.2-R0.1-SNAPSHOT")
+
+    implementation("com.github.thefruxz.moltenkt:moltenkt-core:1.0-PRE-16")
+    implementation("com.github.thefruxz.moltenkt:moltenkt-paper:1.0-PRE-16")
+    implementation("com.github.thefruxz.moltenkt:moltenkt-unfold:1.0-PRE-16")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+
 }
 
 tasks.test {
@@ -20,5 +31,5 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "17"
 }

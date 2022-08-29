@@ -1,0 +1,8 @@
+name: MakeThisPlaceAHome
+version: 1.0
+api-version: 1.18
+main: MTPAH
+author: Fruxz
+description: Makes the current place a home
+depend:
+  - MoltenKT-Paper
